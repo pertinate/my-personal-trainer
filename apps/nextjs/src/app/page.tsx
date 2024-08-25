@@ -1,12 +1,7 @@
-import { Suspense } from "react";
+// import { Suspense } from "react";
 
 import { api, HydrateClient } from "~/trpc/server";
 import { AuthShowcase } from "./_components/auth-showcase";
-import {
-  CreatePostForm,
-  PostCardSkeleton,
-  PostList,
-} from "./_components/posts";
 
 export const runtime = "edge";
 
@@ -22,10 +17,10 @@ export default function HomePage() {
             Create <span className="text-primary">T3</span> Turbo
           </h1>
           <AuthShowcase />
-
-          <CreatePostForm />
+          test
+          {/* <CreatePostForm /> */}
           <div className="w-full max-w-2xl overflow-y-scroll">
-            <Suspense
+            {/* <Suspense
               fallback={
                 <div className="flex w-full flex-col gap-4">
                   <PostCardSkeleton />
@@ -35,7 +30,7 @@ export default function HomePage() {
               }
             >
               <PostList />
-            </Suspense>
+            </Suspense> */}
           </div>
         </div>
       </main>
